@@ -8,6 +8,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+import JPushModule from 'jpush-react-native';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -18,6 +19,20 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+  // componentDidMount() {
+  //   JPushModule.notifyJSDidLoad();
+  //   JPushModule.addReceiveCustomMsgListener((message) => {
+  //     this.setState({pushMsg: message});
+  //   });
+  //   JPushModule.addReceiveNotificationListener((message) => {
+  //     console.log("receive notification: " + message);
+  //   })
+  // }
+
+  // componentWillUnmount() {
+  //   JPushModule.removeReceiveCustomMsgListener();
+  //   JPushModule.removeReceiveNotificationListener();
+  // }
   render() {
     return (
       <View style={styles.container}>
